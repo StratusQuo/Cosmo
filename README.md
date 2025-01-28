@@ -113,39 +113,18 @@ cosmo history
 cosmo revert -f backup_file.xlsx
 ```
 
-📁 File Structure
-Copy~/.config/cosmo/
-├── config.toml         # Main configuration
-├── aliases.config      # Path/file aliases
-├── backups/           # Form state backups
-├── logs/              # Action logs
-├── database/          # Change history
-└── staging/           # Staged Excel files
-⚙️ Configuration
-config.toml
-tomlCopy[VCS]
-staged_file = ""
-current_version = "none"
+📁 ## Config Folder Structure
+```
+~/.config/cosmo/
+├── config.toml         # Main configuration for the app
+├── aliases.config      # Use this file to define path or file aliases
+├── backups/            # Stores all backups of form state made with the "Backup" command
+├── logs/               # Action logs
+├── database/           # Change history -- can be queried with the "History" command.
+└── staging/            # Staged Excel files
+```
 
-[Backup]
-timestamp_format = "%m-%d-%Y_%I:%M:%S_%p"
-backup_directory = "~/.config/cosmo/backups"
+## 🙏 Acknowledgments
 
-[Logger]
-logs_directory = "~/.config/cosmo/logs"
-timestamp_format = "%m-%d-%Y_%I:%M:%S_%p"
-aliases.config
-Define shortcuts for frequently used paths and files:
-CopyPathAlias backup
-    Path ~/.config/cosmo/backups/
-    FileAlias myform
-    FilePath ~/.config/cosmo/backups/myform.xlsx
-🤝 Contributing
-Contributions are welcome! Please feel free to submit pull requests.
-📝 License
-This project is licensed under the MIT License - see the LICENSE file for details.
-🙏 Acknowledgments
-
-Built with the amazing Rich library for beautiful terminal output
-Uses Selenium for web automation
-Inspired by the need to make form-filling less tedious and more reliable
+Built with the amazing Rich library for beautiful terminal output.
+Uses Selenium for web automation.
