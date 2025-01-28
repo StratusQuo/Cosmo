@@ -1,0 +1,11 @@
+[VCS]
+staged_file = ""
+current_version = "none"
+
+[Backup]
+timestamp_format = "%m-%d-%Y_%I:%M:%S_%p"
+backup_directory = "~/.config/cosmo/backups"
+
+[Logger]
+logs_directory = "~/.config/cosmo/logs"
+timestamp_format = "%m-%d-%Y_%I:%M:%S_%p"
